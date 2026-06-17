@@ -66,6 +66,27 @@ xdg-open index.html    # Linux
 python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
+## Deploy a live preview
+
+The app is fully static (no build), so any static host works. Config files
+for the two easiest options are included.
+
+### Netlify (drag-and-drop — fastest)
+1. Go to **[app.netlify.com/drop](https://app.netlify.com/drop)**.
+2. Drag this project folder onto the page.
+3. You get a live URL in seconds. (`netlify.toml` sets the publish dir.)
+
+### Netlify (connected repo — auto-deploys on push)
+1. **[app.netlify.com](https://app.netlify.com)** → *Add new site* → *Import from Git*.
+2. Pick this repo and branch. No build command; publish directory `.`.
+
+### Vercel
+1. **[vercel.com/new](https://vercel.com/new)** → import this repo.
+2. Framework preset: **Other**; no build command; output dir `.`.
+   (`vercel.json` enables clean URLs.)
+
+> These steps need a Netlify/Vercel login, so they're done from your account.
+
 ## Files
 
 | File | Purpose |
