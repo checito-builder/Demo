@@ -1,0 +1,10 @@
+# Netlify config for the dOS static prototype.
+# No build step — the site is plain HTML/CSS/JS served from the repo root.
+[build]
+  publish = "."
+
+# Friendly URLs: allow /index without the .html extension.
+[[redirects]]
+  from = "/index"
+  to = "/index.html"
+  status = 200
